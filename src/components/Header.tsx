@@ -14,7 +14,7 @@ export interface HeaderProps {
     reduced?: boolean
 }
 
-const Header: React.FC = ({reduced}: HeaderProps) => {
+const Header: React.FC<HeaderProps> = ({reduced}: HeaderProps) => {
     const [difficulty, setDifficulty] = useState<string>("");
     const [scoreUpdated, setScoreUpdated] = useState<boolean>(false);
     const [score, setScore] = useState<number>(0);
