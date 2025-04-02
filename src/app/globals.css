@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff; /* White background */
+  --foreground: #333333; /* Dark grey text color */
+  --font-roboto-sans: 'Roboto Thin Sans', sans-serif;
+  --font-roboto-mono: 'Robotor Mono', monospace;
+}
+
+@theme {
+  --color-easy: var(--color-green-400);
+  --color-hard-500: var(--color-red-500);
+  --color-hard: var(--color-red-400);
+  --color-primary:#E2710C;
+  --color-primary-border: #884701;
+  --color-secondary: #F6B914;
+  --color-third: #FEF0CA;
+
+  --color-pastel-pink: #FFB3BA;
+  --color-pastel-pink-dark: #CC8F94;
+  --color-pastel-orange: #FFDFBA;
+  --color-pastel-orange-dark: #CCB28F;
+  --color-pastel-yellow: #FFFFBA;
+  --color-pastel-yellow-dark: #CCCC8F;
+  --color-pastel-green: #BAFFC9;
+  --color-pastel-green-dark: #8FCC9A;
+  --color-pastel-blue: #BAE1FF;
+  --color-pastel-blue-dark: #8FB3CC;
+  --color-pastel-purple: #D4BAFF;
+  --color-pastel-purple-dark: #A38FCC;
+
+  --textShadow: '0 2px 4px var(--tw-shadow-color)';
+  --textShadow-sm: '0 1px 2px var(--tw-shadow-color)';
+  --textShadow-lg: '0 8px 16px var(--tw-shadow-color)';
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-roboto-sans);
+  --font-mono: var(--font-roboto-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Roboto Thin", sans-serif;
+}
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutZoom {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+#task {
+  animation: fadeInZoom 1s ease-in, fadeOutZoom 1s ease-out 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 0s, 3s;
+}
+
+.result_animation {
+  animation: fadeInZoom 1s ease-in 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0s, 1s;
+}
+
+.score {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.score.incremented {
+  transform: scale(1.1);
+}
+
+@keyframes wonky {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(10deg) scale(0.9);
+  }
+  75% {
+    transform: rotate(-5deg) scale(1.05);
+  }
+}
+
+.animate-wonky {
+  animation: wonky 2s 2s;
+}
