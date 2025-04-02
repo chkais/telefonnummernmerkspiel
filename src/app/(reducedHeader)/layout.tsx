@@ -1,6 +1,6 @@
 import type {Metadata} from "next";
 import {Geist, Geist_Mono} from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import Header from "@/components/Header";
 import {ConfigProvider} from "@/context/ConfigContext";
 import {Footer} from "@/components/footer";
@@ -38,7 +38,7 @@ export default function RootLayout({
         </div>
         <ConfigProvider>
             <div className={"flex flex-col h-svh"}>
-                <Header/>
+                <Header reduced={true}/>
                 <div className={"flex-grow"}>
                     {children}
                 </div>

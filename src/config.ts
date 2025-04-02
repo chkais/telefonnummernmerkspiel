@@ -26,9 +26,9 @@ export const defaultConfig: Config = {
   difficulty: Difficulty.Easy,
   score: 0,
   contacts: [
-    { name: "Mama", number: "01784083803", color: "#ff70a6" },
-    { name: "Papa", number: "01632315482", color: "#ff9770" },
-    { name: "Oma & Opa Festnetz", number: "0221694288", color: "#7fc8f8" },
+    { name: "Mama", number: "123456789", color: "pastel-orange" },
+    { name: "Papa", number: "123456789", color: "pastel-pink" },
+    { name: "Oma & Opa Festnetz", number: "123456789", color: "pastel-blue" },
   ],
   success: false,
 };

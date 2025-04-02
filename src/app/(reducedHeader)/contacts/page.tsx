@@ -19,8 +19,7 @@ export default function Page() {
             {config.contacts.map((contact, index) => (
                 <button
                     key={index}
-                    className="w-full mb-2 p-4 text-third rounded drop-shadow-md"
-                    style={{ backgroundColor: contact.color }}
+                    className={`w-full mb-2 p-4 text-third rounded drop-shadow-md bg-${contact.color}`}
                     onClick={() => handleContactClick(contact)}
                 >
                     {contact.name}

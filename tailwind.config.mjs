@@ -7,6 +7,16 @@ const config = {
         },
     },
     plugins: [],
+    safelist: [
+        'bg-pastel-blue',
+        'bg-pastel-orange',
+        'bg-pastel-pink',
+        'bg-pastel-purple',
+        'bg-pastel-yellow',
+        'bg-pastel-green',
+
+
+    ]
 };
 
 export default config;

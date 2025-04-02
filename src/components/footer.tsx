@@ -18,8 +18,10 @@ export function Footer() {
     const handleAndereSchwierigkeit = () => {
         router.push("/");
     };
+
+
     return (
-        <div className=" flex flex-row items-center justify-around w-full grid-cols-3 mb-4 flex-none">
+        <div className="flex flex-row items-center justify-around w-full grid-cols-3 mb-4 flex-none">
             <button
                 className="w-16 h-16 bg-primary border-3 border-primary-border text-third rounded-full flex items-center justify-center"
                 onClick={handleNochmal}
@@ -38,6 +40,7 @@ export function Footer() {
             >
                 <FontAwesomeIcon className={""} size={"xl"} icon={faXmark}/>
             </button>
+
         </div>
     )
 }

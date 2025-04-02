@@ -16,18 +16,12 @@
   --color-secondary: #F6B914;
   --color-third: #FEF0CA;
 
-  --color-pastel-pink: #FFB3BA;
-  --color-pastel-pink-dark: #CC8F94;
-  --color-pastel-orange: #FFDFBA;
-  --color-pastel-orange-dark: #CCB28F;
-  --color-pastel-yellow: #FFFFBA;
-  --color-pastel-yellow-dark: #CCCC8F;
-  --color-pastel-green: #BAFFC9;
-  --color-pastel-green-dark: #8FCC9A;
-  --color-pastel-blue: #BAE1FF;
-  --color-pastel-blue-dark: #8FB3CC;
-  --color-pastel-purple: #D4BAFF;
-  --color-pastel-purple-dark: #A38FCC;
+  --color-pastel-pink: #FFCBE1;
+  --color-pastel-orange: #FFDAB4;
+  --color-pastel-yellow: #F9E1A8;
+  --color-pastel-green: #D6E5BD;
+  --color-pastel-blue: #BCD8EC;
+  --color-pastel-purple: #DCCCEC;
 
   --textShadow: '0 2px 4px var(--tw-shadow-color)';
   --textShadow-sm: '0 1px 2px var(--tw-shadow-color)';
