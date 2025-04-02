@@ -75,7 +75,7 @@ export default function Home() {
             >
                 Nummer hinzufügen
             </button>
-            <div className="mt-4 px-2 w-full">
+            <div className="mt-4 w-full">
                 <h2 className="text-lg font-bold mb-2">Nummern</h2>
                 {config.contacts.map((contact, index) => (
                     <div key={index}
