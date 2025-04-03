@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { useRouter } from 'next/navigation';
 import { useConfig } from "@/context/ConfigContext";
 import { Difficulty } from "@/config";
@@ -17,6 +17,10 @@ export default function Home() {
         setConfig(newConfig);
         router.push("/contacts");
     };
+
+    useEffect(() => {
+        setShowModal(!config.edited)
+    }, [config]);
 
     return (
         <div className="flex flex-col items-center justify-evenly p-4 mt-4">

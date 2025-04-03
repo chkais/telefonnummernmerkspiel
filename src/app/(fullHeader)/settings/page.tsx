@@ -18,9 +18,9 @@ export default function Home() {
     const handleAddContact = () => {
         if (config.contacts.length < 4) {
             const newContact = {name, number, color};
-            setConfig({...config, contacts: [...config.contacts, newContact]});
             const edited = true
-            setConfig({...config, edited})
+            const newConfig = {...config, contacts: [...config.contacts, newContact], edited};
+            setConfig(newConfig);
             setName("");
             setNumber("");
             setColor("");
@@ -31,8 +31,10 @@ export default function Home() {
 
     const handleDeleteContact = (index: number) => {
         const updatedContacts = config.contacts.filter((_, i) => i !== index);
-        setConfig({...config, contacts: updatedContacts});
+        const edited = true
+        setConfig({...config, contacts: updatedContacts, edited});
     };
+
 
     return (
         <div className="flex flex-col p-2 items-center justify-center">
