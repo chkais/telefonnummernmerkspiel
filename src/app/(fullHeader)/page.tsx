@@ -25,10 +25,7 @@ export default function Home() {
     return (
         <div className="flex flex-col items-center justify-evenly p-4 mt-4">
             {showModal && (
-                <Modal
-                    message="Um die Nummern einzugeben, bitte oben rechts in die Einstellungen (kleines Zahnrad) gehen. Zum Ausprobieren: Die aktuellen Nummern sind '123456789'"
-                    onClose={() => setShowModal(false)}
-                />
+                <Modal onClose={() => setShowModal(false)}/>
             )}
             <button
                 className="w-full p-4 text-third bg-primary border-primary-border font-bold rounded flex flex-row items-center justify-center drop-shadow-md"

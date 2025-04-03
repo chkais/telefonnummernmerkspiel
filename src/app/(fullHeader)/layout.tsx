@@ -3,6 +3,8 @@ import {Geist, Geist_Mono} from "next/font/google";
 import "../globals.css";
 import Header from "@/components/Header";
 import {ConfigProvider} from "@/context/ConfigContext";
+import Link from "next/link";
+import React from "react";
 
 
 const geistSans = Geist({
@@ -41,9 +43,9 @@ export default function RootLayout({
                 <div className={"flex-grow"}>
                     {children}
                 </div>
+                <div className={"h-8 bottom-0 mx-auto"}><Link href={"/impressum"}>Impressum</Link></div>
             </div>
         </ConfigProvider>
-
         </body>
         </html>
     );
