@@ -21,13 +21,12 @@ export default function Home() {
             <h2 className={"text-lg font-bold my-4"}>Allgemeiner Hinweis</h2>
             <p className={"mb-4"}>
                 Dies ist eine von mir privat für meine Kinder entwickelte Web-App. Sie wurde mit dem Ziel online
-                gestellt,
-                dass auch andere Menschen von dieser profitieren.
+                gestellt, dass auch andere Menschen von dieser profitieren.
             </p>
 
             <p className={"mb-4"}>Hintergrund: Meine eigenen Kinder sind noch zu jung für Smartphones / Handys, sollen aber für Notfälle
                 die
-                Nummern ihrere Eltern können. Die App soll das Erlernen ein bisschen vereinfachen.
+                Nummern ihrer Eltern aus dem Kopf auswendig können. Die App soll das Erlernen ein bisschen vereinfachen.
             </p>
 
             <p  className={"mb-4"}>Wichtig war uns dabei auch eine zum Handy ähnliche Struktur der Tasten, damit sich im Zweifel auch die

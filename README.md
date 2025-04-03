@@ -1,3 +1,13 @@
+# Hintergrund
+Unsere eigenen Kinder sind noch zu jung für Smartphones / Handys, sollen aber für Notfälle die Nummern ihrer Eltern aus dem Kopf können. Die App soll das Erlernen ein bisschen vereinfachen.
+ 
+Wichtig war uns dabei auch eine zum Handy ähnliche Struktur der Tasten, damit sich im Zweifel auch die
+                "Muster" eingeprägt werden.
+
+Wir hoffen, dass euch die App gefallt und sie euch ein wenig hilft. Bei uns hat es super geklappt. 
+Innerhalb weniger Minuten, waren die Nummern gelernt.
+
+# Default README
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
