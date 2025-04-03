@@ -22,15 +22,13 @@ export default function Play() {
 
         // Extract the first 4 digits
         const firstPart = cleaned.slice(0, 4);
-        // Extract the next 3 digits
-        const secondPart = cleaned.slice(4, 7);
         // Extract the remaining digits and group them into 2-tuples
-        const remainingPart = cleaned.slice(7).match(/.{1,2}/g);
+        const remainingPart = cleaned.slice(4).match(/.{1,2}/g);
 
         if (remainingPart) {
-            return [firstPart, secondPart, ...remainingPart].filter(Boolean).join(' ');
+            return [firstPart, ...remainingPart].filter(Boolean).join(' ');
         }
-        return [firstPart, secondPart].filter(Boolean).join(' ');
+        return [firstPart].filter(Boolean).join(' ');
     };
 
     useEffect(() => {
