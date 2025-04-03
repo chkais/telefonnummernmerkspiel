@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -26,7 +27,7 @@ export default function Home() {
 
             <p className={"mb-4"}>Hintergrund: Meine eigenen Kinder sind noch zu jung für Smartphones / Handys, sollen aber für Notfälle
                 die
-                Nummern ihrere Eltern können. Die App soll das erlernen ein bisschen vereinfachen.
+                Nummern ihrere Eltern können. Die App soll das Erlernen ein bisschen vereinfachen.
             </p>
 
             <p  className={"mb-4"}>Wichtig war uns dabei auch eine zum Handy ähnliche Struktur der Tasten, damit sich im Zweifel auch die
@@ -38,7 +39,7 @@ export default function Home() {
                 Gerät im Browser-Cache / Application Storage.
             </p>
             .
-            <p className={"mb-4"}>Der Code ist einsehbar auf Github (unter folgender Adresse: )</p>
+            <p className={"mb-4"}>Der Code ist einsehbar auf Github (unter folgender Adresse: <Link href={"https://github.com/chkais/telefonnummernmerkspiel"}>https://github.com/chkais/telefonnummernmerkspiel</Link>)</p>
         </div>
     );
 }
