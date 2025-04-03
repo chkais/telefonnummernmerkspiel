@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface ColorPickerProps {
     selectedColor: string;
@@ -8,6 +8,7 @@ interface ColorPickerProps {
 
 const ColorPicker: React.FC<ColorPickerProps> = ({ selectedColor, onSelectColor, colors }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [expandLeft, setExpandLeft] = useState(false);
     const pickerRef = useRef<HTMLDivElement>(null);
 
     const handleColorClick = (color: string) => {
@@ -24,6 +25,12 @@ const ColorPicker: React.FC<ColorPickerProps> = ({ selectedColor, onSelectColor,
     useEffect(() => {
         if (isOpen) {
             document.addEventListener("mousedown", handleClickOutside);
+            const rect = pickerRef.current?.getBoundingClientRect();
+            if (rect && rect.right > window.innerWidth) {
+                setExpandLeft(true);
+            } else {
+                setExpandLeft(false);
+            }
         } else {
             document.removeEventListener("mousedown", handleClickOutside);
         }
@@ -40,7 +47,7 @@ const ColorPicker: React.FC<ColorPickerProps> = ({ selectedColor, onSelectColor,
             >
             </button>
             {isOpen && (
-                <div className="absolute top-12 left-0 bg-white border rounded shadow-lg p-2">
+                <div className={`absolute top-12 ${expandLeft ? "right-0" : "-left-20"} bg-white border rounded shadow-lg p-2 w-30`}>
                     <div className="grid grid-cols-3 gap-2">
                         {colors.map((color) => (
                             <div

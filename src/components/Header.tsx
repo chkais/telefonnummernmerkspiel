@@ -2,12 +2,12 @@
 
 import React, {useEffect, useState} from "react";
 import {useConfig} from "@/context/ConfigContext";
-import {faGear, faStar, faXmark} from "@fortawesome/free-solid-svg-icons";
+import {faGear, faStar} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Difficulty} from "@/config";
 import Image from "next/image";
 import {useRouter} from "next/navigation";
-
+import Link from "next/link";
 
 
 export interface HeaderProps {
@@ -63,12 +63,14 @@ const Header: React.FC<HeaderProps> = ({reduced}: HeaderProps) => {
         <>
             <header
                 className={"relative flex flex-col items-center justify-center h-fit w-full bg-third pb-1 flex-none"}>
-                < Image priority={true} className={`w-full h-35`}
-                        src={`${reduced ? "/header_1.png" : "/header_1.png"}`}
-                        alt={"Header Image Telefonnummer Merk Spiel"}
-                        height={400} width={300} style={{
-                    objectFit: `cover`,
-                }}/>
+                <Link href="/" className={"w-full"}>
+                    <Image priority={true} className={`w-full h-35 sm:h-60 lg:h-96`}
+                           src={`${reduced ? "/header_1.png" : "/header_1.png"}`}
+                           alt={"Header Image Telefonnummer Merk Spiel"}
+                           height={400} width={300} style={{
+                        objectFit: `cover`,
+                    }}/>
+                </Link>
                 <button
                     className="absolute top-1 right-1 w-6 h-6 bg-primary border-3 border-primary-border text-third rounded-full flex items-center justify-center"
                     onClick={handleSettingClick}
@@ -82,7 +84,8 @@ const Header: React.FC<HeaderProps> = ({reduced}: HeaderProps) => {
                                                                                          icon={faStar}/><FontAwesomeIcon
                             className={"text-secondary"} icon={faStar}/></>}</div>
                     <div className={`w-1/3 text-center rounded`}>
-                        <div className={`rounded px-2 py-1 bg-${config.selectedContact?.color}`}>{config.selectedContact?.name}</div>
+                        <div
+                            className={`rounded px-2 py-1 bg-${config.selectedContact?.color}`}>{config.selectedContact?.name}</div>
                     </div>
                     <div className={`w-1/3 text-right score ${scoreUpdated ? "incremented" : ""}`}><FontAwesomeIcon
                         className={"mr-1 text-secondary"}

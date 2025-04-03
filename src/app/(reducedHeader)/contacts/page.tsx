@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/navigation";
-import { useConfig } from "@/context/ConfigContext";
+import {useRouter} from "next/navigation";
+import {useConfig} from "@/context/ConfigContext";
 
 export default function Page() {
     const { config, setConfig } = useConfig();

@@ -77,7 +77,7 @@ export default function Play() {
     };
 
     return (
-        <div className="flex flex-col items-center p-4">
+        <div className="flex flex-col items-center p-4 max-w-lg mx-auto">
             <input
                 type="tel"
                 value={inputValue}

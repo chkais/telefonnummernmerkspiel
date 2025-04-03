@@ -19,11 +19,13 @@ export default function Home() {
         if (config.contacts.length < 4) {
             const newContact = {name, number, color};
             setConfig({...config, contacts: [...config.contacts, newContact]});
+            const edited = true
+            setConfig({...config, edited})
             setName("");
             setNumber("");
             setColor("");
         } else {
-            alert("Maximum number of contacts reached.");
+            alert("Maximale Anzahl an Kontakten erreicht!");
         }
     };
 
@@ -47,6 +49,7 @@ export default function Home() {
             >
                 Zurück
             </button>
+            <div className="my-4 border-t border-primary-border mx-2 h-1 w-full" />
             <div className="mt-4 w-full flex flex-row justify-between">
                 <input
                     type="text"
@@ -57,7 +60,7 @@ export default function Home() {
                 />
                 <input
                     type="text"
-                    placeholder="Number"
+                    placeholder="Nummer"
                     value={number}
                     onChange={(e) => setNumber(e.target.value)}
                     className="p-2 border rounded mb-2 w-5/12 h-10"
@@ -70,11 +73,12 @@ export default function Home() {
 
             </div>
             <button
-                className="p-2 bg-blue-500 text-white rounded"
+                className="p-2 bg-blue-500 text-white rounded mt-2 w-full"
                 onClick={handleAddContact}
             >
                 Nummer hinzufügen
             </button>
+            <div className="my-4 border-t border-primary-border mx-2 h-1 w-full" />
             <div className="mt-4 w-full">
                 <h2 className="text-lg font-bold mb-2">Nummern</h2>
                 {config.contacts.map((contact, index) => (

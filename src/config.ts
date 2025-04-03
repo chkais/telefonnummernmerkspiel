@@ -19,6 +19,7 @@ export interface Config {
   contacts: contact[];
   selectedContact?: contact;
   success: boolean;
+  edited?: boolean;
 }
 
 // Default configuration
@@ -31,6 +32,7 @@ export const defaultConfig: Config = {
     { name: "Oma & Opa Festnetz", number: "123456789", color: "pastel-blue" },
   ],
   success: false,
+  edited: false,
 };
 
 // Save configuration to local storage
