@@ -28,7 +28,7 @@ substitutions:
   _REPO: ${REPO}
 
 images:
-  - '${_REPO}telefonnummernmerkspiel'
+  - '${_REPO}/telefonnummernmerkspiel'
 
 options:
   logging: CLOUD_LOGGING_ONLY
